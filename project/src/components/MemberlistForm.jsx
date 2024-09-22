@@ -17,7 +17,7 @@ export default function () {
 
   function getMembersData() {
     axios
-      .get("http://localhost:8081/get_members_data")
+      .get("https://dairycow-health-prediction.onrender.com/get_members_data")
       .then((res) => {
         let data = res.data.member_data;
         setMembers(data); // Save the data to the state variable
