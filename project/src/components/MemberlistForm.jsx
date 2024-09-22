@@ -30,7 +30,7 @@ export default function () {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("http://localhost:8081/Add_Member_Details", values)
+      .post("https://dairycow-health-prediction.onrender.com/Add_Member_Details", values)
       .then((res) => {
         getMembersData();
         alert("Member Details Added or Updated Successfully");

@@ -17,7 +17,7 @@ const Healthreport = () => {
 
   useEffect(() => {
     axios
-      .post("http://localhost:8081/healthreportdata", formData)
+      .post("https://dairycow-health-prediction.onrender.com/healthreportdata", formData)
       .then((res) => {
         let data = res.data.graphdata;
         let yearlyData = [];

@@ -18,7 +18,7 @@ export default function Society_Details() {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("http://localhost:8081/get_society_details");
+      const res = await axios.get("https://dairycow-health-prediction.onrender.com/get_society_details");
       const data = res.data.data;
       setValues({
         Center_Number: data.Center_Number,
@@ -36,7 +36,7 @@ export default function Society_Details() {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("http://localhost:8081/Society_Details_Update", values)
+      .post("https://dairycow-health-prediction.onrender.com/Society_Details_Update", values)
       .then((res) => {
         alert("Society Details Updated Successfully");
       })
