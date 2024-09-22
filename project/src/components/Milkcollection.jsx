@@ -26,7 +26,7 @@ export default function Milkcollection() {
   const handleChange = (event) => {
     setValues({ ...values, [event.target.name]: event.target.value });
     axios
-      .post("http://localhost:8081/rateandtotamt", values)
+      .post("https://dairycow-health-prediction.onrender.com/rateandtotamt", values)
       .then((res) => {
         console.log(res.data.rate);
         setRate(res.data.rate);
@@ -42,7 +42,7 @@ export default function Milkcollection() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8081/getdateandshift")
+      .get("https://dairycow-health-prediction.onrender.com/getdateandshift")
       .then((res) => {
         let data = res.data.dateandshift;
         if (data.Date == null || data.shift == null) {
@@ -75,7 +75,7 @@ export default function Milkcollection() {
     };
     console.log(updatedValues);
     axios
-      .post("http://localhost:8081/milkcoolection", updatedValues)
+      .post("https://dairycow-health-prediction.onrender.com/milkcoolection", updatedValues)
       .then((res) => {
         setLoading(false); // Stop loading
         document.getElementById("milkcollectionform").reset();

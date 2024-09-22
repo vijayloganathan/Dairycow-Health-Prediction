@@ -22,7 +22,7 @@ export default function CollectionDateShift() {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("http://localhost:8081/shiftdetail", values)
+      .post("https://dairycow-health-prediction.onrender.com/shiftdetail", values)
       .then((res) => {
         console.log("Collection started!!");
         navigate("/home/milkcollection", { state: { formData: values } });

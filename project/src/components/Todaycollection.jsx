@@ -24,7 +24,7 @@ export default function TodayCollection() {
     setLoading(true); // Set loading to true when the request starts
     try {
       const response = await axios.post(
-        "http://localhost:8081/downloadtodayreport",
+        "https://dairycow-health-prediction.onrender.com/downloadtodayreport",
         values,
         { responseType: "blob" } // Set response type to blob
       );
