@@ -1,0 +1,6 @@
+.transparent-textbox {
+    background-color: rgba(255, 255, 255, 0.4); /* Adjust the alpha (4th value) for transparency */
+    border: 1px solid #000000; /* Add border to make it visible */
+  }
+
+  
