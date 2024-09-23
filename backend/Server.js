@@ -217,6 +217,7 @@ app.get("/getdateandshift", (req, res) => {
 });
 
 app.get("/get_society_details", (req, res) => {
+  console.log("society_details")
   let data = {
     Center_Number: "",
     Owner_Name: "",
@@ -255,6 +256,7 @@ app.get("/get_society_details", (req, res) => {
 });
 
 app.get("/get_members_data", (req, res) => {
+  console.log("members_data")
   let member_data = []; // Define member_data outside the try block
 
   try {
@@ -851,6 +853,7 @@ function healthreportpass(membercode, fromdate, todate) {
 
 app.post("/healthreportdata", async (req, res) => {
   let { membercode, fromdate, todate } = req.body;
+  console.log(membercode, fromdate, todate,"Health Report")
   try {
     const result = await healthreportpass(membercode, fromdate, todate);
     const graphdata = JSON.parse(result);
