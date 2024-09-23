@@ -15,7 +15,14 @@ const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require("twilio")(accountSid, authToken);
 
 const app = express();
-app.use(cors());
+const corsOptions = {
+  origin: '*', // Allow all origins
+  methods: ['GET', 'POST'], // Specify allowed methods
+  allowedHeaders: ['Content-Type', 'Authorization'] // Specify allowed headers
+};
+app.use(cors(corsOptions));
+app.options('*', cors()); 
+// app.use(cors());
 app.use(express.json());
 
 let RateWorkbook, rateWorksheet;
