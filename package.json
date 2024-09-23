@@ -1,6 +1,0 @@
-{
-  "devDependencies": {
-    "@rollup/plugin-commonjs": "^26.0.1",
-    "@vitejs/plugin-legacy": "^5.4.2"
-  }
-}
