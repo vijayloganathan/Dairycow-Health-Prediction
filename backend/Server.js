@@ -9,6 +9,11 @@ const bodyParser = require("body-parser");
 const fs = require("fs");
 const dotenv = require("dotenv");
 
+
+app.use(cors({
+  origin: 'https://cow-health-prediction.onrender.com', // Your frontend URL
+}));
+
 dotenv.config();
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
