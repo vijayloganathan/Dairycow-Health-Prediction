@@ -18,9 +18,7 @@ const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require("twilio")(accountSid, authToken);
 
 const app = express();
-app.use(cors({
-  origin: 'https://cow-health-prediction.onrender.com', 
-}));
+app.use(cors());
 app.use(express.json());
 
 let RateWorkbook, rateWorksheet;
